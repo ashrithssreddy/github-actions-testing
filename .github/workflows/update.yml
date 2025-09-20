@@ -1,7 +1,9 @@
 name: Update Data CSV
 
 on:
-  workflow_dispatch:  # Allows manual trigger
+  workflow_dispatch:   # manual trigger
+  schedule:
+    - cron: "0,20,40 * * * *"   # runs at the 20th minute of every hour (UTC)
 
 jobs:
   update-data:
